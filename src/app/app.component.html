@@ -1,0 +1,12 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+
+<button (click)="onToggleDisplay()">Display Details</button>
+<p *ngIf="showDetails">Secret Password = tuna</p>
+<div *ngFor="let entry of log; let i = index" 
+  [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
+  [ngClass]="{'white-text': i >= 5}">
+  {{ entry }}
+</div>
